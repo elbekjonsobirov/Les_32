@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        let a = prompt('a sonni kiriting :');
+        let b = prompt('b sonni kiriting :');
+
+        a = parseInt(a);
+        b = parseInt(b);
+
+        let aEKUB = [];
+        let bEKUB = [];
+
+        for (let i = 1; i <= a; i++) {
+            if (a % i === 0) {
+                aEKUB.push(i);
+            }
+        }
+
+        for (let j = 1; j <= b; j++) {
+            if (b % j === 0) {
+                bEKUB.push(j);
+            }
+        }
+
+        console.log('a sonining bolinuvchilari: ' + aEKUB);
+        console.log('b sonining bolinuvchilari: ' + bEKUB);
+
+
+        let EKUB = [];
+
+        if (aEKUB.length > bEKUB.length) {
+            for (let arrA = 0; arrA < aEKUB.length; arrA++) {
+                for (let arrB = 0; arrB < bEKUB.length; arrB++) {
+                    if (aEKUB[arrA] === bEKUB[arrB]) {
+                        EKUB.push(aEKUB[arrA]);
+                    }
+                }
+            }
+        } else {
+            for (let arrB = 0; arrB < bEKUB.length; arrB++) {
+                for (let arrA = 0; arrA < aEKUB.length; arrA++) {
+                    if (aEKUB[arrA] === bEKUB[arrB]) {
+                        EKUB.push(bEKUB[arrB]);
+                    }
+                }
+            }
+        }
+
+        console.log('a va b sonlaringi umumiy boolinuvchilari: ' + EKUB);
+        let max = EKUB[0];
+        for (let son = 0; son < EKUB.length; son++) {
+            if (EKUB[son] > max) {
+                max = EKUB[son];
+            }
+        }
+
+        console.log('a va b sonlirining EKUB: ' + max);
+    </script>
+</body>
+
+</html>

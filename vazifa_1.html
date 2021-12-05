@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let a = prompt('a burchakni kiriting:');
+        let b = prompt('b burchakni kiriting:');
+        let c = prompt('c burchakni kiriting:');
+
+        a = parseInt(a);
+        b = parseInt(b);
+        c = parseInt(c);
+
+        if (a < b + c && b < a + c && c < a + b) {
+            console.log('Berilgan sonlardan uchburchak yasasa boladi.');
+        } else {
+            console.log('Bu sonlardan uchburchak yasab bolmaydi.');
+        }
+    </script>
+</body>
+
+</html>
